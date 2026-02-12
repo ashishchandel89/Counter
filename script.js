@@ -1,10 +1,11 @@
 let congratulation = document.querySelector("h3");
 let count = document.querySelector("h1");
 let button1 = document.querySelector("#btn1");
-let button2 = document.querySelector("#btn2");
+let refresh=document.querySelector("#refresh");
 
 let counter = 0;
 let target = 108;
+let refresh1=0;
 
 button1.addEventListener("click", function () {
 
@@ -26,11 +27,13 @@ button1.addEventListener("click", function () {
     }
 });
 
-button2.addEventListener("click", function () {
 
-    counter--;
-    if (counter < 0) counter = 0;
-    count.innerHTML = counter;
+
+refresh.addEventListener("click",function(){
+        counter=0;
+        target=108;
+        count.innerHTML = counter;
+        congratulation.innerHTML = "";
 });
 
 

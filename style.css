@@ -16,6 +16,8 @@ main {
   height: 100vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 1.3rem;
   align-items: center;
   background-image: url("https://4kwallpapers.com/images/wallpapers/radha-krishna-3840x2160-14416.png");
   background-position: center;
@@ -52,6 +54,12 @@ main section #heading h2 {
 main section #heading h1 {
   color: white;
   font-size: 5rem;
+}
+main section #heading #refresh {
+  padding: 0.2rem;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
 }
 main section #buttons {
   display: flex;
