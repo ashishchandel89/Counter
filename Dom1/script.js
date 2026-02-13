@@ -16,3 +16,6 @@ else{
 }
 })
 
+let arr=["ashish","manish","harish","ashok","poonam","rohit","bharat","faizan","kartik","harman","ishan"];
+let a=Math.floor(Math.random()*(arr.length));
+console.log(arr[a]);
