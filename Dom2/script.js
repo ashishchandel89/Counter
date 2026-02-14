@@ -11,10 +11,11 @@ main.addEventListener("mousemove",function(){
     let rot=Math.floor(Math.random()*360);
     let scale=Math.floor(Math.random()*2);
 
-   div.style.width="50px";
-   div.style.height="50px";
-   div.style.borderRadius="50%";
-   div.style.backgroundColor=`rgb(${r},${g},${b})`;
+   div.style.width="20px";
+   div.style.height="20px";
+   div.style.borderRadius="50%"
+   div.style.border = `1px solid  rgb(128, 254, 3))`
+  div.style.boxShadow=" 30px 30px 30px rgb(128, 254, 3)"
    div.style.position="absolute";
    div.style.left=`${left}%`;
     div.style.top=`${top}%`;
