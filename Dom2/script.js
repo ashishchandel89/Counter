@@ -1,6 +1,7 @@
 let btn=document.querySelector('.btn');
 let main=document.querySelector('main');
-btn.addEventListener("click",function(){
+let body=document.querySelector('body');
+main.addEventListener("mousemove",function(){
     let div=document.createElement('div');
     let left=Math.random()*100;
     let top=Math.random()*100;
@@ -20,5 +21,5 @@ btn.addEventListener("click",function(){
     div.style.rotate=`${rot}deg`;
     div.style.scale=`${scale}`;
 
-   main.appendChild(div);
+   body.appendChild(div);
 });

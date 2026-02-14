@@ -18,6 +18,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 main .btn {
   padding: 1rem 2rem;
