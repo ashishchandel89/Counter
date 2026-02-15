@@ -33,7 +33,12 @@ main #card {
   flex-direction: column;
   gap: 0.5rem;
 }
+main #card #top {
+  position: relative;
+  overflow: hidden;
+}
 main #card #top i {
+  pointer-events: none;
   font-size: 5.5rem;
   font-weight: 800;
   color: transparent;
@@ -47,16 +52,17 @@ main #card #top i {
   opacity: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1) rotate(-60deg);
-  transition: cubic-bezier(0.02, 1.58, 0.65, 0.01);
+  transform: translate(-50%, -50%) scale(0) rotate(-60deg);
+  transition: all cubic-bezier(0.65, 1, 0.77, 1.44) 0.4s;
 }
-main #card #top img {
+main #card #top #img1 {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 main #card #bottom {
   width: 100%;
@@ -69,4 +75,5 @@ main #card #bottom {
 }
 main #card #bottom i {
   font-size: 1.5rem;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
