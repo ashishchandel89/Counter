@@ -1,3 +1,4 @@
+let mian=document.querySelector('main');
 const users = [
     {
         fullName: "Aarav Mehta",
@@ -30,11 +31,14 @@ const users = [
 ];
 
 let sum='';
+
 users.forEach(function(val){
     sum=sum+`<div class="card">
             <img src="${val.image}" alt="image not found">
             <h1>${val.fullName}</h1>
             <h2>${val.profession}</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita aspernatur officiis animi laborum!</p>
-        </div>`
+            <p>${val.description}</p>
+            <h6>${val.tags}</h6>
+            </div>`
 })
+mian.innerHTML=sum;
