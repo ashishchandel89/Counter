@@ -13,4 +13,98 @@ html, body {
 main {
   width: 100%;
   height: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section {
+  width: 90%;
+  height: 65%;
+  border-radius: 1rem;
+  display: flex;
+  position: relative;
+  gap: 0.1rem;
+}
+main section .white_btn {
+  flex-grow: 1;
+  background-color: white;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  box-shadow: 2rem 2rem 6rem rgb(8, 8, 8);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 1rem;
+}
+main section .white_btn h3 {
+  font-size: 1.5rem;
+  font-weight: 530;
+}
+main section .black {
+  width: 4%;
+  height: 55%;
+  background-color: black;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0.6rem 0.8rem 0.8rem rgb(51, 50, 50);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: aliceblue;
+  padding: 1rem;
+}
+main section .black h4 {
+  font-size: 1.3rem;
+  font-weight: 530;
+}
+main section #b1 {
+  left: 35px;
+}
+main section #b2 {
+  left: 100px;
+}
+main section #b3 {
+  left: 225px;
+}
+main section #b4 {
+  left: 290px;
+}
+main section #b5 {
+  left: 355px;
+}
+main section #b6 {
+  left: 482px;
+}
+main section #b7 {
+  left: 548px;
+}
+main section #b8 {
+  left: 675px;
+}
+main section #b9 {
+  left: 740px;
+}
+main section #b10 {
+  left: 805px;
+}
+main section #b11 {
+  left: 930px;
+}
+main section #b12 {
+  left: 995px;
+}
+main section #b13 {
+  left: 1120px;
+}
+main section #b14 {
+  left: 1190px;
+}
+main section #b15 {
+  left: 1255px;
 }/*# sourceMappingURL=style.css.map */
