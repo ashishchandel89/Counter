@@ -1,4 +1,4 @@
-let mian=document.querySelector('main');
+let main=document.querySelector('main');
 const users = [
     {
         fullName: "Aarav Mehta",
@@ -38,7 +38,7 @@ users.forEach(function(val){
             <h1>${val.fullName}</h1>
             <h2>${val.profession}</h2>
             <p>${val.description}</p>
-            <h6>${val.tags}</h6>
+            
             </div>`
 })
-mian.innerHTML=sum;
+main.innerHTML=sum;

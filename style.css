@@ -9,6 +9,9 @@ body {
   height: 100%;
   font-family: "Poppins", sans-serif;
   background-color: black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 main {
@@ -23,9 +26,14 @@ main {
   background-position: center;
   background-size: cover;
 }
+main h2 {
+  color: white;
+  font-size: 4rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 main h3 {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 main section {
@@ -100,7 +108,7 @@ main section #buttons #btn1:hover {
     font-size: 3rem;
   }
   main section #heading h3 {
-    font-size: 1rem;
+    font-size: 0.5rem;
     text-align: center;
   }
   main section #buttons {
@@ -126,7 +134,7 @@ main section #buttons #btn1:hover {
     font-size: 5.5rem;
   }
   main section #heading h3 {
-    font-size: 1.6rem;
+    font-size: 0.5rem;
   }
   main section #buttons {
     gap: 4rem;

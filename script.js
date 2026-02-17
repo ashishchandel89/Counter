@@ -2,10 +2,12 @@ let congratulation = document.querySelector("h3");
 let count = document.querySelector("h1");
 let button1 = document.querySelector("#btn1");
 let refresh=document.querySelector("#refresh");
+let h2=document.querySelector('h2');
 
 let counter = 0;
 let target = 108;
 let refresh1=0;
+let mala=0;
 
 button1.addEventListener("click", function () {
 
@@ -14,10 +16,13 @@ button1.addEventListener("click", function () {
 
     // show message at target
     if (counter === target) {
-        congratulation.innerHTML ="🎉🙏 बधाई हो! आपने " + target + " नाम-जप पूरे कर लिए ✨🌸";
+        mala++;
+        h2.innerHTML=mala ;
+        congratulation.innerHTML ="✨🌸 बधाई हो! आपने " + target + " नाम-जप पूरे कर लिए ✨🌸";
         congratulation.style.color = "white";
          
         target += 108;   
+        
     }
 
     // clear message on next click
