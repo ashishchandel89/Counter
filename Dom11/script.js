@@ -1,26 +1,27 @@
 const reels = [
     {
         username: "codewithayush",
-        likeCount: 14820,
+        likeCount: 14898,
         isLiked: false,
         commentCount: 423,
         shareCount: 92,
         isFollowed: false,
         caption: "Dark mode > light mode. Change my mind.",
-        video: "video1.mp4.mp4",
-        userprofile: "https://images.unsplash.com/photo-1613915617430-8ab0fd7c6baf?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        video: "videos3.mp4",
+        userprofile: "https://images.unsplash.com/photo-1613915617430-8ab0fd7c6baf?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ismuted: false,
     },
     {
         username: "designbysan",
-        likeCount: 9820,
+        likeCount: 1920,
         isLiked: true,
         commentCount: 184,
         shareCount: 41,
         isFollowed: false,
         caption: "UI tip: Padding is personality. Give your elements some space.",
-        video: "video2.mp4.mp4",
-
-        userprofile: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79"
+        video: "videos4.mp4",
+        userprofile: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79",
+        ismuted: false,
     },
     {
         username: "frontend.ninja",
@@ -31,7 +32,7 @@ const reels = [
         isFollowed: true,
         caption: "When flexbox finally aligns the way you wanted 😭🔥",
         video: "video3.mp4.mp4",
-
+       ismuted: false,
         userprofile: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126"
     },
     {
@@ -43,7 +44,7 @@ const reels = [
         isFollowed: false,
         caption: "My solo Bali trip changed everything 🌴",
         video: "video4.mp4.mp4",
-
+       ismuted: false,
         userprofile: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
     },
     {
@@ -54,8 +55,8 @@ const reels = [
         shareCount: 55,
         isFollowed: true,
         caption: "Code. Sleep. Repeat. That’s the cycle.",
-        video: "video5.mp4.mp4",
-
+        video: "video1.mp4.mp4",
+        ismuted: false,
         userprofile: "https://images.unsplash.com/photo-1599566150163-29194dcaad36"
     },
     {
@@ -67,7 +68,7 @@ const reels = [
         isFollowed: true,
         caption: "No gym? No problem. Do this 12-min workout at home.",
         video: "video6.mp4.mp4",
-
+       ismuted: false,
         userprofile: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6"
     },
     {
@@ -79,7 +80,7 @@ const reels = [
         isFollowed: false,
         caption: "You won’t believe this burger exists 🤯🍔",
         video: "video7.mp4.mp4",
-
+       ismuted: false,
         userprofile: "https://images.unsplash.com/photo-1552058544-f2b08422138a"
     },
     {
@@ -91,7 +92,7 @@ const reels = [
         isFollowed: true,
         caption: "Late night vibes // piano version 🎹✨",
         video: "video8.mp4.mp4",
-
+        ismuted: false,
         userprofile: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe"
     },
     {
@@ -103,7 +104,7 @@ const reels = [
         isFollowed: false,
         caption: "The most underrated smartphone of 2024 📱",
         video: "video9.mp4.mp4",
-
+       ismuted: false,
         userprofile: "https://images.unsplash.com/photo-1511367461989-f85a21fda167"
     },
     {
@@ -115,38 +116,90 @@ const reels = [
         isFollowed: true,
         caption: "GSAP can literally change your career. Start today.",
         video: "video10.mp4.mp4",
-
+        ismuted: false,
         userprofile: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
     }
 ];
-
-let sum=0;
-reels.forEach(function(elem){
-    sum=sum+`<div class="reel">
-                    <div class="top">
-                    <video src="${elem.video}" autoplay loop muted></video>
-                    </div>
-                    <div class="bottom">
-                        <div class="user">
-                            <div class="img2">
-                        <img src="${elem.userprofile}"  alt="image not found">
-                        </div>
-                        <h3>${elem.username}</h3>
-                        <button>Follow</button>
-                        </div>
-                        <h5>${elem.caption}</h5>
-                    </div>
-                    <div class="right">
-                        <i class="ri-heart-3-line"></i>
-                        <h5>109k</h5>
-                        <i class="ri-chat-3-line"></i>
-                        <h5>10.90k</h5>
-                        <i class="ri-send-ins-line"></i>
-                        <h5>80.8k</h5>
-                        <i class="ri-more-2-fill"></i>
-                    </div>
-                </div>`
-})
-
 let allReels=document.querySelector('.outerreel');
+
+function allData(){
+let sum="";
+reels.forEach(function(elem,idx){
+ 
+   sum += `
+<div class="reel">
+    <div class="top">
+        <video autoplay loop ${elem.ismuted ? 'muted' : ''} src="${elem.video}" ></video>
+         <div id="${idx}" class="mute">${elem.ismuted ? '<i class="ri-volume-mute-fill"></i>' : '<i class="ri-volume-up-fill"></i>'}</div>
+    </div>
+
+    <div class="bottom">
+        <div class="user">
+            <div class="img2">
+                <img src="${elem.userprofile}" alt="image not found">
+            </div>
+            <h3>${elem.username}</h3>
+                <button id=${idx} class='follow'>${elem.isFollowed ? 'Unfollow' : 'Follow'}</button>
+        </div>
+
+        <h5>${elem.caption}</h5>
+    </div>
+
+                   
+     <div class="right">
+            <div id=${idx} class="like">
+              <h4 class="like-icon icon">${elem.isLiked ? '<i class="love ri-heart-3-fill"></i>' : '<i class="ri-heart-3-line"></i>'}</h4>
+              <h5>${elem.likeCount}</h5>
+            </div>
+            <div class="comment">
+              <h4 class="comment-icon icon"><i class="ri-chat-3-line"></i></h4>
+              <h5>${elem.commentCount}</h5>
+            </div>
+            <div class="share">
+              <h4 class="share-icon icon"><i class="ri-share-forward-line"></i></h4>
+              <h5>${elem.shareCount}</h5>
+            </div>
+            <div class="menu">
+              <h4 class="menu-icon icon"><i class="ri-more-2-fill"></i></h4>
+            </div>
+          </div>
+</div>
+`;
+
+})
 allReels.innerHTML=sum;
+}
+allData();
+
+allReels.addEventListener('click',function(dets){
+    if (dets.target.className == 'like') {
+        if(!reels[dets.target.id].isLiked){
+            reels[dets.target.id].likeCount++;
+            reels[dets.target.id].isLiked=true;
+        }
+        else{
+            reels[dets.target.id].likeCount--;
+            reels[dets.target.id].isLiked=false;
+        }
+        allData();
+    }
+
+    if(dets.target.className == 'follow'){
+        if(!reels[dets.target.id].isFollowed){
+            reels[dets.target.id].isFollowed=true;
+        }
+        else{
+            reels[dets.target.id].isFollowed=false;
+        }
+        allData();
+    }
+
+    if(dets.target.className == "mute") 
+    if(!reels[dets.target.id].ismuted){
+            reels[dets.target.id].ismuted=true;
+        }
+        else{
+            reels[dets.target.id].ismuted=false;
+        }
+        allData();
+    });

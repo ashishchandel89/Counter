@@ -98,11 +98,27 @@ main section .outerreel .reel .bottom .user button {
   font-size: 0.8rem;
   font-weight: 600;
   border-radius: 0.6rem;
+  cursor: pointer;
 }
 main section .outerreel .reel .bottom h5 {
   font-size: 1rem;
   color: white;
   font-weight: 500;
+}
+main section .outerreel .reel .mute {
+  top: 15px;
+  right: 15px;
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+}
+main section .outerreel .reel .mute i {
+  color: rgb(175, 171, 171);
+  font-size: 1.5rem;
+  pointer-events: none;
+  background-color: rgb(59, 57, 57);
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 main section .outerreel .reel .right {
   width: 60px;
@@ -116,14 +132,130 @@ main section .outerreel .reel .right {
   position: absolute;
   padding-bottom: 7rem;
 }
+main section .outerreel .reel .right .like {
+  cursor: pointer;
+}
+main section .outerreel .reel .right h4 {
+  cursor: pointer;
+  pointer-events: none;
+}
 main section .outerreel .reel .right i {
+  font-size: 30px;
+  font-weight: 500;
   color: white;
-  font-size: 1.7rem;
-  font-weight: 200;
 }
 main section .outerreel .reel .right h5 {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: white;
   margin-bottom: 1rem;
   font-weight: 400;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+main section .outerreel .reel .right .love {
+  color: red;
+}
+
+/* Large tablets */
+@media (max-width: 1024px) {
+  main section {
+    width: 40vw;
+  }
+}
+/* Tablets & small laptops */
+@media (max-width: 768px) {
+  main {
+    padding: 0.3rem;
+  }
+  main section {
+    width: 60vw;
+  }
+  main section .outerreel .reel .bottom {
+    padding: 18px 16px;
+  }
+  main section .outerreel .reel .bottom h5 {
+    font-size: 0.9rem;
+  }
+  main section .outerreel .reel .bottom .user h3 {
+    font-size: 0.9rem;
+  }
+  main section .outerreel .reel .bottom .user .follow button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+  main section .outerreel .reel .right {
+    width: 50px;
+  }
+  main section .outerreel .reel .right i {
+    font-size: 2rem;
+  }
+  main section .outerreel .reel .right h5 {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+/* Mobile devices */
+@media (max-width: 480px) {
+  main {
+    padding: 0;
+  }
+  main section {
+    width: 100vw;
+    height: 100%;
+    border-radius: 0;
+  }
+  main section .outerreel {
+    gap: 0;
+  }
+  main section .outerreel .reel {
+    border-radius: 0;
+  }
+  main section .outerreel .reel .top video {
+    border-radius: 0;
+  }
+  main section .outerreel .reel .bottom {
+    padding: 15px 12px;
+  }
+  main section .outerreel .reel .bottom h5 {
+    font-size: 0.85rem;
+  }
+  main section .outerreel .reel .bottom .user .img2 {
+    width: 34px;
+    height: 34px;
+  }
+  main section .outerreel .reel .bottom .user h3 {
+    font-size: 0.85rem;
+  }
+  main section .outerreel .reel .bottom .user .follow button {
+    padding: 0.25rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  main section .outerreel .reel .right {
+    width: 45px;
+    padding-bottom: 6rem;
+  }
+  main section .outerreel .reel .right i {
+    font-size: 2rem;
+  }
+  main section .outerreel .reel .right h5 {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+/* Very small phones */
+@media (max-width: 360px) {
+  main section .outerreel .reel .bottom {
+    padding: 12px 10px;
+  }
+  main section .outerreel .reel .bottom h5 {
+    font-size: 0.8rem;
+  }
+  main section .outerreel .reel .right i {
+    font-size: 2rem;
+  }
+  main section .outerreel .reel .right h5 {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
