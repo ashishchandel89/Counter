@@ -8,6 +8,14 @@ html,body{
     height: 100%;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+@keyframes changeShadowColor{
+        from{
+            box-shadow: 0 0 2rem #e6306d;
+        }
+        to{
+             box-shadow: 0 0 2rem #090909;
+        }
+    }
 
 main{
     width: 100%;
@@ -23,6 +31,7 @@ main{
         background-color: rgba(79, 75, 71, 0);
         border-radius: 0.8rem;
         box-shadow: 0 0 2rem #e6306d;
+        animation: changeShadowColor 3s infinite forwards alternate;
        display: flex;
        flex-direction: column;
        justify-content: space-around;
