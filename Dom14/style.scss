@@ -67,7 +67,7 @@ main{
         }
     }
     .card:hover{
-        box-shadow: 0 0 1.9rem rgb(255, 0, 123);
+        box-shadow: 0 0 2.1rem rgb(255, 0, 123);
         background: linear-gradient(black) padding-box,conic-gradient(from var(--rotate),black,rgb(255, 0, 123),black) border-box;
          animation: move 6s infinite forwards alternate;
     }
