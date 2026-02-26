@@ -33,7 +33,7 @@ main {
   background-color: black;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 main .card {
   max-width: 350px;
@@ -45,7 +45,14 @@ main .card {
   padding-inline: 10px;
   padding-bottom: 10px;
   border-radius: 15px;
-  border: 5px solid rgba(0, 0, 0, 0.11);
+  border: 0 solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgb(255, 0, 195);
+  text-shadow: 0 0 0 white;
+  background: linear-gradient(black) padding-box, conic-gradient(from var(--rotate), black, rgb(255, 0, 195), black) border-box;
+  animation: move 6s infinite forwards alternate;
+  transition: all 0.5s linear;
+  animation-timing-function: linear;
+  animation-play-state: paused;
 }
 main .card .top {
   width: 100%;
@@ -70,7 +77,14 @@ main .card .bottom p {
   color: white;
 }
 main .card:hover {
-  box-shadow: 0 0 2.1rem rgb(255, 0, 123);
-  background: linear-gradient(black) padding-box, conic-gradient(from var(--rotate), black, rgb(255, 0, 123), black) border-box;
-  animation: move 6s infinite forwards alternate;
+  border-width: 7px;
+  animation-play-state: running;
+  box-shadow: 0 0 50px rgb(255, 0, 195);
+  text-shadow: 0 0 10px rgb(255, 0, 195);
+}
+main .card:hover h1 {
+  color: rgb(255, 0, 195);
+}
+main .card:hover p {
+  color: rgb(255, 0, 195);
 }/*# sourceMappingURL=style.css.map */
